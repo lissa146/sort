@@ -1,0 +1,45 @@
+import winsound
+import random
+
+
+class bubblesortmusic:
+    def __init__(self, f, l):
+
+        self.pitch = f
+        self.length = l
+    
+    def noise(self):
+        winsound.Beep(self.pitch, self.length)
+#-------------------------------------------------
+
+def bubblesortmusic(beep):
+	n = len(beep)
+	temp
+	for g in range(n):
+		swapped = False
+		for i in range(0,n-g-1) :
+			if beep[i].pitch > beep[i + 1].pitch:
+				temp = beep[i].pitch
+				beep[i].pitch = beep[i + 1].pitch
+				beep[i + 1].pitch = temp
+				swapped = True
+		if swapped == False:
+			break
+		
+	
+
+ 
+
+#--------------------------------------------------
+list = []
+for i in range(20):
+	list.append(bubblesortmusic(random.randrange(5, 400), random.randrange(50, 30000)))
+
+
+#use a for loop to instantiate & append 20 bubblesortmusic objects
+
+#use for loop to play all the sounds
+
+#call bubblesort
+
+#use for loop to play all the sounds
